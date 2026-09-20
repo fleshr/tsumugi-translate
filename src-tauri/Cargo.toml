@@ -1,0 +1,44 @@
+[package]
+name = "tauri-app"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "tauri_app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+tauri-plugin-log = "2.9.1"
+log = "0.4.34"
+specta = "=2.0.0-rc.25"
+tauri-specta = { version = "=2.0.0-rc.25", features = ["derive", "typescript"] }
+specta-typescript = "0.0.12"
+tauri-plugin-dialog = "2.7.3"
+walkdir = "2.5.0"
+regex = "1.13.1"
+nanoid = "0.5.0"
+log-derive = "0.4.1"
+tokio = { version = "1.53.1", features = ["full"] }
+fake = "5.1.0"
+async-trait = "0.1.92"
+enum_dispatch = "0.3.13"
+async-openai = { version = "0.42.0", features = ["chat-completion", "responses"] }
+schemars = "1.2.2"
+indexmap = { version = "2.14.2", features = ["serde"] }
+
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-window-state = "2"

@@ -1,0 +1,12 @@
+.root {
+  padding: 8px 12px;
+  height: auto;
+}
+
+.inner {
+  display: block;
+}
+
+.label {
+  display: block;
+}

@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  padding: 2px;
+  gap: 0;
+}
+
+.dragRegion {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.logo {
+  margin: 6px;
+  font-size: 16px;
+}
+
+.menu {
+  position: relative;
+}
+
+.actions {
+  position: relative;
+  margin-left: auto;
+  gap: 0;
+}

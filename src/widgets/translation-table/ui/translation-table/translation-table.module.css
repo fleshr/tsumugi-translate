@@ -1,0 +1,13 @@
+.container {
+  height: 100%;
+}
+
+.tr {
+  height: 36px;
+}
+
+.tr > :first-child {
+  width: 52px;
+  color: var(--mantine-color-dimmed);
+  text-align: right;
+}

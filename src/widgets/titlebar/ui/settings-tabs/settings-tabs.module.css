@@ -1,0 +1,11 @@
+.root {
+  gap: var(--mantine-spacing-md);
+}
+
+.panel {
+  width: 60rem;
+}
+
+.tab {
+  width: 8rem;
+}

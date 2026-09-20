@@ -1,0 +1,13 @@
+.container {
+  width: 100dvw;
+  height: 100dvh;
+  gap: 0;
+}
+
+.header {
+  padding: var(--mantine-spacing-md);
+}
+
+.main {
+  overflow: hidden;
+}
